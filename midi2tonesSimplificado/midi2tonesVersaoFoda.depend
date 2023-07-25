@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1690043212 source:c:\users\thiag\onedrive\Área de trabalho\programação\c++\midi2tonesversaofoda\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<stdbool.h>
+	<time.h>
+	<inttypes.h>
+	<dirent.h>
+	<locale.h>
+	<string.h>
+
