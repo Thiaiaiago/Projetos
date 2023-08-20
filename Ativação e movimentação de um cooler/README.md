@@ -1,1 +1,4 @@
-
+# Ativação e movimentação de um coooler
+Neste projeto utilizei duas entradas ADC do STM32F446RE para controlar a ativação de um ventilador e movimentação dele.
+Na primeira parte do programa, uso uma das entradas conversoras de analógico para digital para ler um sinal recebido de uma onda triangular gerada externamente e comparo com um valor de tensão fixo. A ideia é fazer um "mini-game" em que usuário deve clicar um botão no momento correto para que o cooler seja ativado através de um transistor bipolar de junção. 
+A segunda parte consiste em receber outro sinal analógico controlado por potenciômetro em outro canal de ADC que faz uma verificação se esse sinal está dentro de uma das 3 faixas de tensão definidas por mim. Dependendo de qual faixa está, será gerado um sinal de PWM com largura de pulso diferente, o que controlará a movimentação de um servo motor fixado no cooler.
