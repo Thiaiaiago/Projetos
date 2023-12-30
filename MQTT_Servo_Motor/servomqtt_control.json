@@ -1,0 +1,226 @@
+[
+    {
+        "id": "3bab7d86.a7d252",
+        "type": "tab",
+        "label": "Controle Servo MQTT",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "0d07fd20bd416a99",
+        "type": "junction",
+        "z": "3bab7d86.a7d252",
+        "x": 240,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "213d3b0e3f98a1b7",
+        "type": "mqtt out",
+        "z": "3bab7d86.a7d252",
+        "name": "",
+        "topic": "quarto",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a28d8d0f131d92c0",
+        "x": 290,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3c81aa094af145b2",
+        "type": "ui_slider",
+        "z": "3bab7d86.a7d252",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "35b285e6bf03213d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "213d3b0e3f98a1b7"
+            ]
+        ]
+    },
+    {
+        "id": "cbdeb7d8d954d18a",
+        "type": "ui_button",
+        "z": "3bab7d86.a7d252",
+        "name": "",
+        "group": "35b285e6bf03213d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Gira",
+        "tooltip": "",
+        "color": "green",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "gira",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "213d3b0e3f98a1b7"
+            ]
+        ]
+    },
+    {
+        "id": "85c95b034c7b1817",
+        "type": "ui_button",
+        "z": "3bab7d86.a7d252",
+        "name": "",
+        "group": "35b285e6bf03213d",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "45º",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "blue",
+        "className": "",
+        "icon": "",
+        "payload": "45",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "213d3b0e3f98a1b7"
+            ]
+        ]
+    },
+    {
+        "id": "4d40a71d9f978e90",
+        "type": "ui_button",
+        "z": "3bab7d86.a7d252",
+        "name": "",
+        "group": "35b285e6bf03213d",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "90º",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "blue",
+        "className": "",
+        "icon": "",
+        "payload": "90",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "0d07fd20bd416a99"
+            ]
+        ]
+    },
+    {
+        "id": "ecb7931915f7fbca",
+        "type": "ui_button",
+        "z": "3bab7d86.a7d252",
+        "name": "",
+        "group": "35b285e6bf03213d",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "180º",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "blue",
+        "className": "",
+        "icon": "",
+        "payload": "180",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "213d3b0e3f98a1b7"
+            ]
+        ]
+    },
+    {
+        "id": "a28d8d0f131d92c0",
+        "type": "mqtt-broker",
+        "name": "TCC_Simplificado",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "35b285e6bf03213d",
+        "type": "ui_group",
+        "name": "Infos",
+        "tab": "b958d32c32d95b13",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b958d32c32d95b13",
+        "type": "ui_tab",
+        "name": "Sincronia",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
